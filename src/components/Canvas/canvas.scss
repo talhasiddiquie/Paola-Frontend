@@ -1,0 +1,158 @@
+.overlay {
+  right: 0;
+  top: 70px;
+  z-index: 999;
+  opacity: 0.5;
+  position: fixed;
+  width: calc(100% - 480px);
+  height: calc(100vh - 70px);
+}
+
+.canvas {
+  display: flex;
+  overflow: scroll;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% - 480px);
+  height: calc(100vh - 70px);
+  background-color: #DDDDDD;
+
+  &-gallery-layout-buttons {
+    top: 1em;
+    right: 2em;
+    position: absolute;
+  }
+
+  &-header {
+    margin: 1em 1em 0em 1em;
+    font-size: 1.8em;
+    color: $color-black;
+    align-self: flex-start;
+    border-bottom: 2px solid $color-gray;
+  }
+
+  &-illustration {
+
+    margin: 8em 0em;
+    text-align: center;
+
+    p,
+    img {
+      margin: 2em 0em;
+    }
+
+    img {
+      max-width: 400px;
+      max-height: 400px;
+    }
+
+    p {
+      font-size: 1.4em;
+      font-weight: bold;
+
+      button {
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        color: rgb(89, 10, 163);
+        background-color: transparent;
+      }
+    }
+
+  }
+
+  #canvas-add-icon--1 {
+    top: 45%;
+    left: 38%;
+    position: fixed;
+  }
+
+  #canvas-add-icon--2 {
+    top: 45%;
+    right: 10%;
+    position: fixed;
+  }
+
+  .canvas-action-button {
+    top: 1.5em;
+    right: 4em;
+    position: absolute;
+    color: white;
+    background-color: $color-primary;
+  }
+
+
+
+  &-page {
+    position: relative;
+    min-width: 500px;
+    min-height: 500px;
+    max-width: 500px;
+    max-height: 500px;
+    margin: 4em 0em 1em 0em;
+    background-color: $color-white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    &-icongroup {
+      width: 8em;
+      top: -3.6em;
+      right: 1.6em;
+      display: flex;
+      position: absolute;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+  }
+
+  &-page:last-of-type+p {
+    margin-bottom: 8em;
+  }
+
+  &-gallery {
+
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    max-width: 90%;
+    overflow: auto;
+    position: relative;
+
+
+    &-img {
+      width: 85%;
+      height: 85%;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      background-color: teal;
+      transition: all .3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+
+    &-imagewrapper {
+      width: 500px;
+      height: 500px;
+      display: flex;
+      margin: 0em 0em;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    &-icons {
+      top: 0;
+      right: 3em;
+      position: absolute;
+    }
+  }
+
+  .image-handle-canvas {
+    width: 100%;
+    height: 100%;
+    background-color: peachpuff;
+  }
+}

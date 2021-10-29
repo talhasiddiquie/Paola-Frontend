@@ -1,0 +1,40 @@
+.sidebar {
+  width: 120px;
+  height: calc(100vh - 70px);
+  background-color: $color-black;
+
+  ul {
+    font-size: 1.4em;
+    text-align: center;
+
+    .selected {
+      background-color: $color-gray;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+
+    li {
+      color: white;
+      padding: 2em 1em;
+      cursor: pointer;
+      transition: all .2s ease-in-out;
+
+      &:hover {
+        color: $color-black;
+        background-color: $color-white;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+      }
+
+      p {
+        font-size: 1em;
+      }
+    }
+
+    li:last-of-type {
+      border-bottom: 0.5px dotted $color-white;
+    }
+
+    li:nth-child(1) {
+      // background-color: yellow;
+    }
+  }
+}
